@@ -12,13 +12,38 @@ def clock():
         <title>DevOps Clock</title>
         <meta http-equiv="refresh" content="1">
         <style>
-          body { font-family: Arial; text-align: center; margin-top: 100px; }
-          h1 { font-size: 50px; }
+          body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+          .clock-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+          }
+          h1 {
+            font-size: 80px;
+            margin: 0;
+            color: #fff;
+          }
+          p {
+            font-size: 20px;
+            color: #fff;
+          }
         </style>
       </head>
       <body>
-        <h1>{{ time }}</h1>
-        <p>Flask app running with Docker and CI/CD workflow</p>
+        <div class="clock-container">
+          <h1>{{ time }}</h1>
+          <p>Flask app running with Docker and CI/CD workflow</p>
+        </div>
       </body>
     </html>
     """
